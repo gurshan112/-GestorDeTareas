@@ -40,6 +40,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.chkPrioridadAlta = new System.Windows.Forms.CheckBox();
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
+            this.lblContadorTareas = new System.Windows.Forms.Label();
+            this.btnLimpiarCampos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNombre
@@ -140,11 +144,55 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "LISTA";
             // 
+            // chkPrioridadAlta
+            // 
+            this.chkPrioridadAlta.AutoSize = true;
+            this.chkPrioridadAlta.Location = new System.Drawing.Point(318, 158);
+            this.chkPrioridadAlta.Name = "chkPrioridadAlta";
+            this.chkPrioridadAlta.Size = new System.Drawing.Size(88, 17);
+            this.chkPrioridadAlta.TabIndex = 11;
+            this.chkPrioridadAlta.Text = "Prioridad Alta";
+            this.chkPrioridadAlta.UseVisualStyleBackColor = true;
+            // 
+            // cmbCategoria
+            // 
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Location = new System.Drawing.Point(318, 191);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(121, 21);
+            this.cmbCategoria.TabIndex = 12;
+            this.cmbCategoria.SelectedIndexChanged += new System.EventHandler(this.cmbCategoria_SelectedIndexChanged);
+            // 
+            // lblContadorTareas
+            // 
+            this.lblContadorTareas.AutoSize = true;
+            this.lblContadorTareas.Location = new System.Drawing.Point(486, 371);
+            this.lblContadorTareas.Name = "lblContadorTareas";
+            this.lblContadorTareas.Size = new System.Drawing.Size(75, 13);
+            this.lblContadorTareas.TabIndex = 13;
+            this.lblContadorTareas.Text = "Total tareas: 0";
+            this.lblContadorTareas.Click += new System.EventHandler(this.lblContadorTareas_Click);
+            // 
+            // btnLimpiarCampos
+            // 
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(318, 244);
+            this.btnLimpiarCampos.Name = "btnLimpiarCampos";
+            this.btnLimpiarCampos.Size = new System.Drawing.Size(121, 23);
+            this.btnLimpiarCampos.TabIndex = 14;
+            this.btnLimpiarCampos.Text = "Limpiar campos";
+            this.btnLimpiarCampos.UseVisualStyleBackColor = true;
+            this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnLimpiarCampos);
+            this.Controls.Add(this.lblContadorTareas);
+            this.Controls.Add(this.cmbCategoria);
+            this.Controls.Add(this.chkPrioridadAlta);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -158,6 +206,7 @@
             this.Controls.Add(this.txtNombre);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,6 +226,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.CheckBox chkPrioridadAlta;
+        private System.Windows.Forms.ComboBox cmbCategoria;
+        private System.Windows.Forms.Label lblContadorTareas;
+        private System.Windows.Forms.Button btnLimpiarCampos;
     }
 }
 

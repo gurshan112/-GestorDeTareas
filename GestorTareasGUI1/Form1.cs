@@ -20,7 +20,13 @@ namespace GestorTareasGUI1
         public Form1()
         {
             InitializeComponent();
+   
+
+            cmbCategoria.Items.Add("Trabajo");
+            cmbCategoria.Items.Add("Personal");
+            cmbCategoria.Items.Add("Estudios");
         }
+        
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -49,6 +55,7 @@ namespace GestorTareasGUI1
 
             tareas.Add(t);
             lstTareas.Items.Add(t);
+            ActualizarContador();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -76,5 +83,33 @@ namespace GestorTareasGUI1
             }
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblContadorTareas_Click(object sender, EventArgs e)
+        {
+           
+        }
+        void ActualizarContador()
+        {
+            lblContadorTareas.Text = "Total tareas: " + tareas.Count;
+        }
+
+       
+            private void btnLimpiarCampos_Click(object sender, EventArgs e)
+        {
+            txtNombre.Clear();
+            txtDescripcion.Clear();
+            cmbCategoria.SelectedIndex = -1;
+            chkPrioridadAlta.Checked = false;
+        }
     }
-}
+    }
+
