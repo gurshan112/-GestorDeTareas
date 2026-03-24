@@ -16,6 +16,16 @@ namespace GestorTareasGUI1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            // ----------------------------
+            // LÍNEA PARA SIMULAR CONFLICTO
+            // En la rama feature/login:
+            // Console.WriteLine("Login implementado");
+
+            // En la rama feature/registro:
+            // Console.WriteLine("Registro implementado");
+            // ----------------------------
+
             Application.Run(new Form1());
         }
     }
